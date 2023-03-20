@@ -1,0 +1,179 @@
+/* Resetleme işlemleri */
+html {
+    height: 100%;
+}
+* {
+    box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+}
+div {
+    overflow: auto;
+}
+img {
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    /* object-fit: cover; özelliği bütün projelerde kullan 
+    resmin içeriğinin daralmasını engeller ve resimler bozulmaz */
+}
+/* *******Reset işlemleri******** */
+
+body {
+    background-color: blueviolet;
+}
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Main div */
+.main-div {
+    margin: 50px 0;
+    text-align: center;
+    line-height: 3;
+    color: white;
+}
+.main-div .fa-brands {
+    margin-inline: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+    font-size: 35px;
+}
+.main-div .fa-brands:hover {
+    color: rgb(64, 139, 224);
+}
+.animate {
+    color: white;
+    animation: fade 2s infinite;
+}
+@keyframes fade {
+    0% {
+        color: wheat;
+    }
+    50% {
+        color: transparent;
+    }
+    100% {
+        color: wheat;
+    }
+}
+
+/* Temel işlemler */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 0 80px;
+    padding-bottom: 100px;
+    background-color: white;
+   
+}
+.content {
+    width: 100%;
+    margin-top: 60px;
+}
+.column-100,
+.column-75,
+.column-50,
+.column-25 {
+    float: left;
+    padding: 20px;
+}
+.column-100 {
+    width: 100%;
+}
+.column-75 {
+    width: 75%;
+}
+.column-50 {
+    width: 50%;
+}
+.column-25 {
+    width: 25%;
+}
+
+/* Hakkımda Profil */
+.column-25 img {
+    transition: transform 0.2s;
+}
+.column-25 img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* hesapla, iletişim */
+input, select, textarea {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    border: none;
+    background-color: blueviolet;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: 0.8s;
+}
+.column-25 button {
+    margin-top: 23px;
+}
+button:hover {
+    background-color: white;
+    color: blueviolet;
+}
+@media screen and (max-width: 1100px) {
+    .container {
+        width: 90%;
+    }
+    .column-25, .column-75 {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        text-align: center;
+        padding: 0 30px;
+    }
+    .column-100,
+    .column-75,
+    .column-50,
+    .column-25 {
+        width: 100%;
+    }
+    button {
+        width: 100%;
+    }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: blueviolet;
+    border: 1px solid white;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px black;
+    transition: 1s;
+}
+::-webkit-scrollbar-track {
+    background-color: white;
+    border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(56, 2, 107);
+    border: none;
+}
